@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>scroll sheet</title>
+    <style>
+        .playContainer {
+            display: flex;
+            justify-content: space-around;
+            width: 120px;
+            height: 60px;
+        }
+        .box {
+            background-image: url("./number-bg-24-480.png");
+            background-position: center 0;
+            background-repeat: repeat-y;
+            transition: all ease-out;
+            width: 24px;
+            height: 48px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="playContainer">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div>
+                <button id="startButton">start</button>
+            </div>
+        </div>
+        <script>
+            function start(numbers) {
+                var numberBoxs = document.querySelectorAll(".box");
+                for(var i = 0; i < 3; i++) {
+                    numberBoxs[i].style.backgroundPositionY = (-48 * numbers[i] - 48 * 10) + "px";
+                    numberBoxs[i].style.transitionDuration = (i + 1) * 200 + "ms";
+                }
+            }
+            window.onload = function() {
+                var button = document.querySelector("#startButton");
+                button.addEventListener('click', function() {
+                    start([5, 9 , 8]);
+                })
+            }
+        </script>
+    </body>
+
+</html>
