@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>红绿灯</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: auto auto;
+        }
+
+        .traffic-light {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: auto auto;
+            /* background-color: aliceblue; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="traffic-light"></div>
+    </div>
+    <script>
+        let trafficLight = document.querySelector('.traffic-light');
+        function sleep(duration) {
+            return new Promise((resolve, reject) => {
+                setTimeout(resolve, duration);
+            })
+        }
+        async function changeColor(color, duration) {
+            trafficLight.style.backgroundColor = color;
+            await sleep(duration);
+        }
+        async function schedule() {
+            while (true) {
+                await changeColor('green', 3000);
+                await changeColor('yellow', 1000);
+                await changeColor('red', 2000);
+            }
+
+        }
+        schedule();
+    </script>
+</body>
+
+</html>
