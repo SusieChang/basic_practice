@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原生拖拽</title>
+    <style>
+        .draggable {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="draggable"></div>
+    </div>
+    <script>
+        class DragDrop {
+            constructor() {
+                this.$target = null;
+                this.diffX = 0;
+                this.diffY = 0;
+            }
+
+            _handleEvent(event) {
+                let target = event.target;
+                switch (event.type) {
+                    case 'mousedown':
+                        if (target.className.indexOf("draggable") > -1) {
+                            this.$target = target;
+                            this.diffX = event.clientX - target.offsetLeft;
+                            this.diffY = event.clientY - target.offsetTop;
+                        }
+                        break;
+                    case 'mousemove':
+                        if (this.$target) {
+                            this.$target.style.left = `${event.clientX - this.diffX}px`;
+                            this.$target.style.top = `${event.clientY - this.diffY}px`;
+                        }
+                        break;
+                    case 'mouseup':
+                        this.$target = null;
+                        break;
+                }
+            }
+
+            enable() {
+                document.addEventListener('mousedown', this._handleEvent);
+                document.addEventListener('mousemove', this._handleEvent);
+                document.addEventListener('mouseup', this._handleEvent);
+            }
+
+            disable() {
+                document.removeEventListener('mousedown', this._handleEvent);
+                document.removeEventListener('mousemove', this._handleEvent);
+                document.removeEventListener('mouseup', this._handleEvent);
+            }
+        }
+        let drop = new DragDrop();
+        drop.enable();
+    </script>
+</body>
+
+</html>
