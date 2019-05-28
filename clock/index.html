@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <title>CSS 绘制时钟</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="clock-outline">
+            <div class="second-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="hour-hand"></div>
+            <div class="clock-point">
+            </div>
+        </div>
+    </div>
+    <script>
+        class Clock {
+            constructor(size = 300, point = 16) {
+                this.radius = (size - point) / 2;
+                this._init();
+            }
+            _init() {
+                let point, x, y,
+                    tmpDom = document.createDocumentFragment(),
+                    target = document.querySelector('.clock-point');
+                for (let i = 0, len = 12; i < len; i++) {
+                    point = document.createElement('i')
+                    x = Math.sin(i * Math.PI / 6) * this.radius;
+                    y = Math.cos(i * Math.PI / 6) * this.radius;
+                    point.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${i * -30}deg)`;
+                    tmpDom.appendChild(point);
+                }
+                target.appendChild(tmpDom)
+            }
+            _sleep(duration) {
+                return new Promise((resolve) => {
+                    setTimeout(resolve, duration);
+                })
+            }
+        }
+        let clock = new Clock();
+    </script>
+</body>
+
+</html>
