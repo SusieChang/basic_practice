@@ -1,6 +1,3 @@
-/**
-cubic-bezier : https://cubic-bezier.com/#0,1.18,0,.99
-**/
 * {
   margin: 0;
   padding: 0;
@@ -8,627 +5,245 @@ cubic-bezier : https://cubic-bezier.com/#0,1.18,0,.99
 .container {
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #333;
-}
-@-webkit-keyframes twelve-run {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  91.66666667% {
-    -webkit-transform: rotate(330deg);
-            transform: rotate(330deg);
-  }
-  83.33333333% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
-  }
-  75% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-  }
-  66.66666667% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
-  }
-  58.33333333% {
-    -webkit-transform: rotate(210deg);
-            transform: rotate(210deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  41.66666667% {
-    -webkit-transform: rotate(150deg);
-            transform: rotate(150deg);
-  }
-  33.33333333% {
-    -webkit-transform: rotate(120deg);
-            transform: rotate(120deg);
-  }
-  25% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  16.66666667% {
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
-  }
-  8.33333333% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-  }
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
 }
 @keyframes twelve-run {
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   91.66666667% {
-    -webkit-transform: rotate(330deg);
-            transform: rotate(330deg);
+    transform: rotate(330deg);
   }
   83.33333333% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
+    transform: rotate(300deg);
   }
   75% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
+    transform: rotate(270deg);
   }
   66.66666667% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
+    transform: rotate(240deg);
   }
   58.33333333% {
-    -webkit-transform: rotate(210deg);
-            transform: rotate(210deg);
+    transform: rotate(210deg);
   }
   50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   41.66666667% {
-    -webkit-transform: rotate(150deg);
-            transform: rotate(150deg);
+    transform: rotate(150deg);
   }
   33.33333333% {
-    -webkit-transform: rotate(120deg);
-            transform: rotate(120deg);
+    transform: rotate(120deg);
   }
   25% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   16.66666667% {
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
+    transform: rotate(60deg);
   }
   8.33333333% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
+    transform: rotate(30deg);
   }
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-@-webkit-keyframes sixty-run {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  98.33333333% {
-    -webkit-transform: rotate(354deg);
-            transform: rotate(354deg);
-  }
-  96.66666667% {
-    -webkit-transform: rotate(348deg);
-            transform: rotate(348deg);
-  }
-  95% {
-    -webkit-transform: rotate(342deg);
-            transform: rotate(342deg);
-  }
-  93.33333333% {
-    -webkit-transform: rotate(336deg);
-            transform: rotate(336deg);
-  }
-  91.66666667% {
-    -webkit-transform: rotate(330deg);
-            transform: rotate(330deg);
-  }
-  90% {
-    -webkit-transform: rotate(324deg);
-            transform: rotate(324deg);
-  }
-  88.33333333% {
-    -webkit-transform: rotate(318deg);
-            transform: rotate(318deg);
-  }
-  86.66666667% {
-    -webkit-transform: rotate(312deg);
-            transform: rotate(312deg);
-  }
-  85% {
-    -webkit-transform: rotate(306deg);
-            transform: rotate(306deg);
-  }
-  83.33333333% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
-  }
-  81.66666667% {
-    -webkit-transform: rotate(294deg);
-            transform: rotate(294deg);
-  }
-  80% {
-    -webkit-transform: rotate(288deg);
-            transform: rotate(288deg);
-  }
-  78.33333333% {
-    -webkit-transform: rotate(282deg);
-            transform: rotate(282deg);
-  }
-  76.66666667% {
-    -webkit-transform: rotate(276deg);
-            transform: rotate(276deg);
-  }
-  75% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-  }
-  73.33333333% {
-    -webkit-transform: rotate(264deg);
-            transform: rotate(264deg);
-  }
-  71.66666667% {
-    -webkit-transform: rotate(258deg);
-            transform: rotate(258deg);
-  }
-  70% {
-    -webkit-transform: rotate(252deg);
-            transform: rotate(252deg);
-  }
-  68.33333333% {
-    -webkit-transform: rotate(246deg);
-            transform: rotate(246deg);
-  }
-  66.66666667% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
-  }
-  65% {
-    -webkit-transform: rotate(234deg);
-            transform: rotate(234deg);
-  }
-  63.33333333% {
-    -webkit-transform: rotate(228deg);
-            transform: rotate(228deg);
-  }
-  61.66666667% {
-    -webkit-transform: rotate(222deg);
-            transform: rotate(222deg);
-  }
-  60% {
-    -webkit-transform: rotate(216deg);
-            transform: rotate(216deg);
-  }
-  58.33333333% {
-    -webkit-transform: rotate(210deg);
-            transform: rotate(210deg);
-  }
-  56.66666667% {
-    -webkit-transform: rotate(204deg);
-            transform: rotate(204deg);
-  }
-  55% {
-    -webkit-transform: rotate(198deg);
-            transform: rotate(198deg);
-  }
-  53.33333333% {
-    -webkit-transform: rotate(192deg);
-            transform: rotate(192deg);
-  }
-  51.66666667% {
-    -webkit-transform: rotate(186deg);
-            transform: rotate(186deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  48.33333333% {
-    -webkit-transform: rotate(174deg);
-            transform: rotate(174deg);
-  }
-  46.66666667% {
-    -webkit-transform: rotate(168deg);
-            transform: rotate(168deg);
-  }
-  45% {
-    -webkit-transform: rotate(162deg);
-            transform: rotate(162deg);
-  }
-  43.33333333% {
-    -webkit-transform: rotate(156deg);
-            transform: rotate(156deg);
-  }
-  41.66666667% {
-    -webkit-transform: rotate(150deg);
-            transform: rotate(150deg);
-  }
-  40% {
-    -webkit-transform: rotate(144deg);
-            transform: rotate(144deg);
-  }
-  38.33333333% {
-    -webkit-transform: rotate(138deg);
-            transform: rotate(138deg);
-  }
-  36.66666667% {
-    -webkit-transform: rotate(132deg);
-            transform: rotate(132deg);
-  }
-  35% {
-    -webkit-transform: rotate(126deg);
-            transform: rotate(126deg);
-  }
-  33.33333333% {
-    -webkit-transform: rotate(120deg);
-            transform: rotate(120deg);
-  }
-  31.66666667% {
-    -webkit-transform: rotate(114deg);
-            transform: rotate(114deg);
-  }
-  30% {
-    -webkit-transform: rotate(108deg);
-            transform: rotate(108deg);
-  }
-  28.33333333% {
-    -webkit-transform: rotate(102deg);
-            transform: rotate(102deg);
-  }
-  26.66666667% {
-    -webkit-transform: rotate(96deg);
-            transform: rotate(96deg);
-  }
-  25% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  23.33333333% {
-    -webkit-transform: rotate(84deg);
-            transform: rotate(84deg);
-  }
-  21.66666667% {
-    -webkit-transform: rotate(78deg);
-            transform: rotate(78deg);
-  }
-  20% {
-    -webkit-transform: rotate(72deg);
-            transform: rotate(72deg);
-  }
-  18.33333333% {
-    -webkit-transform: rotate(66deg);
-            transform: rotate(66deg);
-  }
-  16.66666667% {
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
-  }
-  15% {
-    -webkit-transform: rotate(54deg);
-            transform: rotate(54deg);
-  }
-  13.33333333% {
-    -webkit-transform: rotate(48deg);
-            transform: rotate(48deg);
-  }
-  11.66666667% {
-    -webkit-transform: rotate(42deg);
-            transform: rotate(42deg);
-  }
-  10% {
-    -webkit-transform: rotate(36deg);
-            transform: rotate(36deg);
-  }
-  8.33333333% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-  }
-  6.66666667% {
-    -webkit-transform: rotate(24deg);
-            transform: rotate(24deg);
-  }
-  5% {
-    -webkit-transform: rotate(18deg);
-            transform: rotate(18deg);
-  }
-  3.33333333% {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
-  }
-  1.66666667% {
-    -webkit-transform: rotate(6deg);
-            transform: rotate(6deg);
-  }
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 @keyframes sixty-run {
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   98.33333333% {
-    -webkit-transform: rotate(354deg);
-            transform: rotate(354deg);
+    transform: rotate(354deg);
   }
   96.66666667% {
-    -webkit-transform: rotate(348deg);
-            transform: rotate(348deg);
+    transform: rotate(348deg);
   }
   95% {
-    -webkit-transform: rotate(342deg);
-            transform: rotate(342deg);
+    transform: rotate(342deg);
   }
   93.33333333% {
-    -webkit-transform: rotate(336deg);
-            transform: rotate(336deg);
+    transform: rotate(336deg);
   }
   91.66666667% {
-    -webkit-transform: rotate(330deg);
-            transform: rotate(330deg);
+    transform: rotate(330deg);
   }
   90% {
-    -webkit-transform: rotate(324deg);
-            transform: rotate(324deg);
+    transform: rotate(324deg);
   }
   88.33333333% {
-    -webkit-transform: rotate(318deg);
-            transform: rotate(318deg);
+    transform: rotate(318deg);
   }
   86.66666667% {
-    -webkit-transform: rotate(312deg);
-            transform: rotate(312deg);
+    transform: rotate(312deg);
   }
   85% {
-    -webkit-transform: rotate(306deg);
-            transform: rotate(306deg);
+    transform: rotate(306deg);
   }
   83.33333333% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
+    transform: rotate(300deg);
   }
   81.66666667% {
-    -webkit-transform: rotate(294deg);
-            transform: rotate(294deg);
+    transform: rotate(294deg);
   }
   80% {
-    -webkit-transform: rotate(288deg);
-            transform: rotate(288deg);
+    transform: rotate(288deg);
   }
   78.33333333% {
-    -webkit-transform: rotate(282deg);
-            transform: rotate(282deg);
+    transform: rotate(282deg);
   }
   76.66666667% {
-    -webkit-transform: rotate(276deg);
-            transform: rotate(276deg);
+    transform: rotate(276deg);
   }
   75% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
+    transform: rotate(270deg);
   }
   73.33333333% {
-    -webkit-transform: rotate(264deg);
-            transform: rotate(264deg);
+    transform: rotate(264deg);
   }
   71.66666667% {
-    -webkit-transform: rotate(258deg);
-            transform: rotate(258deg);
+    transform: rotate(258deg);
   }
   70% {
-    -webkit-transform: rotate(252deg);
-            transform: rotate(252deg);
+    transform: rotate(252deg);
   }
   68.33333333% {
-    -webkit-transform: rotate(246deg);
-            transform: rotate(246deg);
+    transform: rotate(246deg);
   }
   66.66666667% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
+    transform: rotate(240deg);
   }
   65% {
-    -webkit-transform: rotate(234deg);
-            transform: rotate(234deg);
+    transform: rotate(234deg);
   }
   63.33333333% {
-    -webkit-transform: rotate(228deg);
-            transform: rotate(228deg);
+    transform: rotate(228deg);
   }
   61.66666667% {
-    -webkit-transform: rotate(222deg);
-            transform: rotate(222deg);
+    transform: rotate(222deg);
   }
   60% {
-    -webkit-transform: rotate(216deg);
-            transform: rotate(216deg);
+    transform: rotate(216deg);
   }
   58.33333333% {
-    -webkit-transform: rotate(210deg);
-            transform: rotate(210deg);
+    transform: rotate(210deg);
   }
   56.66666667% {
-    -webkit-transform: rotate(204deg);
-            transform: rotate(204deg);
+    transform: rotate(204deg);
   }
   55% {
-    -webkit-transform: rotate(198deg);
-            transform: rotate(198deg);
+    transform: rotate(198deg);
   }
   53.33333333% {
-    -webkit-transform: rotate(192deg);
-            transform: rotate(192deg);
+    transform: rotate(192deg);
   }
   51.66666667% {
-    -webkit-transform: rotate(186deg);
-            transform: rotate(186deg);
+    transform: rotate(186deg);
   }
   50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   48.33333333% {
-    -webkit-transform: rotate(174deg);
-            transform: rotate(174deg);
+    transform: rotate(174deg);
   }
   46.66666667% {
-    -webkit-transform: rotate(168deg);
-            transform: rotate(168deg);
+    transform: rotate(168deg);
   }
   45% {
-    -webkit-transform: rotate(162deg);
-            transform: rotate(162deg);
+    transform: rotate(162deg);
   }
   43.33333333% {
-    -webkit-transform: rotate(156deg);
-            transform: rotate(156deg);
+    transform: rotate(156deg);
   }
   41.66666667% {
-    -webkit-transform: rotate(150deg);
-            transform: rotate(150deg);
+    transform: rotate(150deg);
   }
   40% {
-    -webkit-transform: rotate(144deg);
-            transform: rotate(144deg);
+    transform: rotate(144deg);
   }
   38.33333333% {
-    -webkit-transform: rotate(138deg);
-            transform: rotate(138deg);
+    transform: rotate(138deg);
   }
   36.66666667% {
-    -webkit-transform: rotate(132deg);
-            transform: rotate(132deg);
+    transform: rotate(132deg);
   }
   35% {
-    -webkit-transform: rotate(126deg);
-            transform: rotate(126deg);
+    transform: rotate(126deg);
   }
   33.33333333% {
-    -webkit-transform: rotate(120deg);
-            transform: rotate(120deg);
+    transform: rotate(120deg);
   }
   31.66666667% {
-    -webkit-transform: rotate(114deg);
-            transform: rotate(114deg);
+    transform: rotate(114deg);
   }
   30% {
-    -webkit-transform: rotate(108deg);
-            transform: rotate(108deg);
+    transform: rotate(108deg);
   }
   28.33333333% {
-    -webkit-transform: rotate(102deg);
-            transform: rotate(102deg);
+    transform: rotate(102deg);
   }
   26.66666667% {
-    -webkit-transform: rotate(96deg);
-            transform: rotate(96deg);
+    transform: rotate(96deg);
   }
   25% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   23.33333333% {
-    -webkit-transform: rotate(84deg);
-            transform: rotate(84deg);
+    transform: rotate(84deg);
   }
   21.66666667% {
-    -webkit-transform: rotate(78deg);
-            transform: rotate(78deg);
+    transform: rotate(78deg);
   }
   20% {
-    -webkit-transform: rotate(72deg);
-            transform: rotate(72deg);
+    transform: rotate(72deg);
   }
   18.33333333% {
-    -webkit-transform: rotate(66deg);
-            transform: rotate(66deg);
+    transform: rotate(66deg);
   }
   16.66666667% {
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
+    transform: rotate(60deg);
   }
   15% {
-    -webkit-transform: rotate(54deg);
-            transform: rotate(54deg);
+    transform: rotate(54deg);
   }
   13.33333333% {
-    -webkit-transform: rotate(48deg);
-            transform: rotate(48deg);
+    transform: rotate(48deg);
   }
   11.66666667% {
-    -webkit-transform: rotate(42deg);
-            transform: rotate(42deg);
+    transform: rotate(42deg);
   }
   10% {
-    -webkit-transform: rotate(36deg);
-            transform: rotate(36deg);
+    transform: rotate(36deg);
   }
   8.33333333% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
+    transform: rotate(30deg);
   }
   6.66666667% {
-    -webkit-transform: rotate(24deg);
-            transform: rotate(24deg);
+    transform: rotate(24deg);
   }
   5% {
-    -webkit-transform: rotate(18deg);
-            transform: rotate(18deg);
+    transform: rotate(18deg);
   }
   3.33333333% {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
+    transform: rotate(12deg);
   }
   1.66666667% {
-    -webkit-transform: rotate(6deg);
-            transform: rotate(6deg);
+    transform: rotate(6deg);
   }
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 #clock {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   width: 300px;
   height: 300px;
   border: 5px solid #ff0;
   background-color: #333;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 20px gray;
-          box-shadow: 0 0 20px gray;
+  box-shadow: 0 0 20px gray;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -641,52 +256,40 @@ cubic-bezier : https://cubic-bezier.com/#0,1.18,0,.99
   height: 100%;
 }
 #clock .clock-point > i:nth-of-type(12) {
-  -webkit-transform: translate3d(0px, 142px, 0) rotate(-360deg);
-          transform: translate3d(0px, 142px, 0) rotate(-360deg);
+  transform: translate3d(0px, 142px, 0) rotate(-360deg);
 }
 #clock .clock-point > i:nth-of-type(11) {
-  -webkit-transform: translate3d(-71px, 122.97560734px, 0) rotate(-330deg);
-          transform: translate3d(-71px, 122.97560734px, 0) rotate(-330deg);
+  transform: translate3d(-71px, 122.97560734px, 0) rotate(-330deg);
 }
 #clock .clock-point > i:nth-of-type(10) {
-  -webkit-transform: translate3d(-122.97560734px, 71px, 0) rotate(-300deg);
-          transform: translate3d(-122.97560734px, 71px, 0) rotate(-300deg);
+  transform: translate3d(-122.97560734px, 71px, 0) rotate(-300deg);
 }
 #clock .clock-point > i:nth-of-type(9) {
-  -webkit-transform: translate3d(-142px, 0px, 0) rotate(-270deg);
-          transform: translate3d(-142px, 0px, 0) rotate(-270deg);
+  transform: translate3d(-142px, 0px, 0) rotate(-270deg);
 }
 #clock .clock-point > i:nth-of-type(8) {
-  -webkit-transform: translate3d(-122.97560734px, -71px, 0) rotate(-240deg);
-          transform: translate3d(-122.97560734px, -71px, 0) rotate(-240deg);
+  transform: translate3d(-122.97560734px, -71px, 0) rotate(-240deg);
 }
 #clock .clock-point > i:nth-of-type(7) {
-  -webkit-transform: translate3d(-71px, -122.97560734px, 0) rotate(-210deg);
-          transform: translate3d(-71px, -122.97560734px, 0) rotate(-210deg);
+  transform: translate3d(-71px, -122.97560734px, 0) rotate(-210deg);
 }
 #clock .clock-point > i:nth-of-type(6) {
-  -webkit-transform: translate3d(0px, -142px, 0) rotate(-180deg);
-          transform: translate3d(0px, -142px, 0) rotate(-180deg);
+  transform: translate3d(0px, -142px, 0) rotate(-180deg);
 }
 #clock .clock-point > i:nth-of-type(5) {
-  -webkit-transform: translate3d(71px, -122.97560734px, 0) rotate(-150deg);
-          transform: translate3d(71px, -122.97560734px, 0) rotate(-150deg);
+  transform: translate3d(71px, -122.97560734px, 0) rotate(-150deg);
 }
 #clock .clock-point > i:nth-of-type(4) {
-  -webkit-transform: translate3d(122.97560734px, -71px, 0) rotate(-120deg);
-          transform: translate3d(122.97560734px, -71px, 0) rotate(-120deg);
+  transform: translate3d(122.97560734px, -71px, 0) rotate(-120deg);
 }
 #clock .clock-point > i:nth-of-type(3) {
-  -webkit-transform: translate3d(142px, 0px, 0) rotate(-90deg);
-          transform: translate3d(142px, 0px, 0) rotate(-90deg);
+  transform: translate3d(142px, 0px, 0) rotate(-90deg);
 }
 #clock .clock-point > i:nth-of-type(2) {
-  -webkit-transform: translate3d(122.97560734px, 71px, 0) rotate(-60deg);
-          transform: translate3d(122.97560734px, 71px, 0) rotate(-60deg);
+  transform: translate3d(122.97560734px, 71px, 0) rotate(-60deg);
 }
 #clock .clock-point > i:nth-of-type(1) {
-  -webkit-transform: translate3d(71px, 122.97560734px, 0) rotate(-30deg);
-          transform: translate3d(71px, 122.97560734px, 0) rotate(-30deg);
+  transform: translate3d(71px, 122.97560734px, 0) rotate(-30deg);
 }
 #clock .clock-point i {
   position: absolute;
@@ -720,8 +323,7 @@ cubic-bezier : https://cubic-bezier.com/#0,1.18,0,.99
   border: 6px solid coral;
   background-color: coral;
   border-radius: 6px;
-  -webkit-animation: twelve-run 43200s cubic-bezier(1, 0, 1, 0) infinite;
-          animation: twelve-run 43200s cubic-bezier(1, 0, 1, 0) infinite;
+  animation: twelve-run 43200s cubic-bezier(1, 0, 1, 0) infinite;
 }
 #clock .minute-hand {
   height: 80px;
@@ -731,8 +333,7 @@ cubic-bezier : https://cubic-bezier.com/#0,1.18,0,.99
   border: 4px solid cornflowerblue;
   border-radius: 4px;
   background-color: cornflowerblue;
-  -webkit-animation: sixty-run 3600s cubic-bezier(1, 0, 1, 0) infinite;
-          animation: sixty-run 3600s cubic-bezier(1, 0, 1, 0) infinite;
+  animation: sixty-run 3600s cubic-bezier(1, 0, 1, 0) infinite;
 }
 #clock .second-hand {
   height: 100px;
@@ -742,6 +343,5 @@ cubic-bezier : https://cubic-bezier.com/#0,1.18,0,.99
   border: 2px solid wheat;
   border-radius: 2px;
   background-color: wheat;
-  -webkit-animation: sixty-run 60s cubic-bezier(1, 0, 1, 0) infinite;
-          animation: sixty-run 60s cubic-bezier(1, 0, 1, 0) infinite;
+  animation: sixty-run 60s cubic-bezier(1, 0, 1, 0) infinite;
 }
