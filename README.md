@@ -20,4 +20,5 @@ git checkout -b branch_name # new branch + switch
 git branch -d branch_name # clean commit delete branch not in
 git branch -D branch_name # force delete branch
 git merge
+git revert commitid # revert commit 
 ```
