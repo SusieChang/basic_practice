@@ -68,38 +68,52 @@
                 currentIndex = 0,
                 length = 5,
                 width = 800,
+                delay = 3500,
                 timer;
             function changeSlide(cur, next) {
                 if (cur == undefined || next == undefined) return;
                 console.log(cur, next);
+                clearInterval(timer);
                 slideList.style.transform = "translate3d(" + (-width * next) + "px,0,0)";
                 slideCircles.children[cur].classList.remove('circle-active');
                 slideCircles.children[next].classList.add('circle-active');
+                currentIndex = next;
+                timerSchedule();
             }
             function timerSchedule() {
                 clearInterval(timer);
                 timer = setInterval(function () {
                     var next = (currentIndex + 1 + length) % length;
                     changeSlide(currentIndex, next);
-                    currentIndex = next;
-                }, 3500);
+                }, delay);
             }
             prevButton.addEventListener('click', function (e) {
                 var next = (currentIndex - 1 + length) % length;
                 changeSlide(currentIndex, next);
-                currentIndex = next;
+
             })
             nextButton.addEventListener('click', function (e) {
                 var next = (currentIndex + 1 + length) % length;
                 changeSlide(currentIndex, next);
-                currentIndex = next;
             })
-            slideList.addEventListener('mouseenter', function (e) {
+            slideList.addEventListener('mouseover', function (e) {
                 clearInterval(timer);
             });
             slideList.addEventListener('mouseleave', function (e) {
                 timerSchedule();
             });
+            slideCircles.addEventListener('click', function (e) {
+                if (e.target.className === 'circle') {
+                    var next = Array.prototype.indexOf.call(e.target.parentElement.children, e.target);
+                    changeSlide(currentIndex, next);
+                }
+            })
+            slideCircles.addEventListener('mouseover', function (e) {
+                if (e.target.className === 'circle') {
+                    var next = Array.prototype.indexOf.call(e.target.parentElement.children, e.target);
+                    changeSlide(currentIndex, next);
+                }
+            })
             timerSchedule();
         }
         startCarousel();
