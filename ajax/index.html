@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+</head>
+
+<body>
+
+    <script>
+        function request({ url, type, params = {}}) {
+            const $type = type || 'GET'; 
+            const $url = url + '?' + Object.keys(params).map(key => `${key}=${encodeURIComponent(params[key])}`).join('&');
+            
+            return new Promise((resolve, reject) => {
+                let xhr = new XMLHttpRequest();
+                xhr.open($url, $type, true);
+                xhr.onreadystatechange( function (e) {
+                    if ( xhr.readyState === 4 ) {
+                        if( (xhr.status >= 200 && xhr.status < 300) || xhr.status === 304 ) {
+                            resolve(xhr.responseText, xhr);
+                        } else {
+                            reject({
+                                code: xhr.status,
+                                message: xhr.response
+                            }, xhr);
+                        }
+                    }
+                })
+                xhr.send();
+            })
+        }
+        request({
+            url: 'http://localhost:8080/',
+            type: 'get',
+            params: {
+                value: 'ajax',
+                time: new Date().toLocaleDateString()
+            }
+        })
+    </script>
+</body>
+
+</html>
