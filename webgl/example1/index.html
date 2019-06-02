@@ -92,10 +92,6 @@
                         // 使用
                         gl.useProgram(program);
                         var errorCode = gl.getError();
-                        while (errorCode) {
-                            console.log('Error occured: ' + errorCode);
-                            errorCode = gl.getError();
-                        }
                         //传入颜色
                         uColor = gl.getUniformLocation(program, 'uColor');
                         gl.uniform4fv(uColor, [1, 1, 0, 1]);
@@ -103,10 +99,6 @@
                         gl.enableVertexAttribArray(aVertexPosition);
                         gl.vertexAttribPointer(aVertexPosition, vertexSetSize, gl.FLOAT, false, 0, 0);
                         gl.drawArrays(gl.TRIANGLES, 0, vertexSetCount);
-                        while (errorCode) {
-                            console.log('Error occured: ' + errorCode);
-                            errorCode = gl.getError();
-                        }
                     }
                 } catch {
                     console.error('webgl not support');
