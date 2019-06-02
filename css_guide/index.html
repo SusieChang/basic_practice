@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CSS权威指南</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="header">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-transparent p-4">
+                    <ul>
+                        <li><a class="nav-link" href="#heading1">基本概念</a></li>
+                        <li><a class="nav-link" href="#2">1</a></li>
+                    </ul>
+                </div>
+                <small class="bg-transparent p-4">参考资料：<cite>CSS权威指南第四版</cite>、<cite>MDN</cite></small>
+            </div>
+            <nav class="navbar navbar-dark bg-transparent sticky-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="navbar-toggler-icon"></i>
+                </button>
+                <h5 class="text-body h1">CSS权威指南</h5>
+            </nav>
+        </header>
+        <main class="accordion" id="accordionExample">
+            <section class="card">
+                <div class="card-header" id="heading1">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="false" aria-controls="collapseOne">
+                            基本概念
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
+                    <div class="card-body">
+
+                        <h4>元素</h4>
+                        <h5>置换元素和非置换元素</h5>
+                        <p>置换元素指用来置换元素内容的部分不由文档内容直接表示，而是根据属性决定。比如img、input、textarea等</p>
+                        <p>HTML元素大部分是非置换元素，即元素的内容由文档内容直接表示。</p>
+                        <h5>行级元素和块级元素</h5>
+                        <p>行内元素的宽度随内容改变，相邻的行内元素排列在同一行，直到一行容纳不下。无法设置宽高。margin和padding设置只在左右方向上有作用。常见的行内元素有：</p>
+                        <ul>
+                            <li>b, big, i, small, tt</li>
+                            <li>abbr, acronym, cite, code, dfn, em, kbd, strong, samp, var</li>
+                            <li>a, bdo, br, img, map, object, q, script, span, sub, sup</li>
+                            <li>button, input, label, select, textarea</li>
+                        </ul>
+                        <p>块级元素占据其父元素（容器）的整个空间。默认情况下，块级元素会新起一行。一般块级元素可以包含行内元素和其他块级元素。一些块级元素：</p>
+                        <ul>
+                            <li>blockquote（引用）、address（联系方式信息）、article（文章内容）、audio（音频）、video（视频）</li>
+                            <li>aside、footer、canvas、header、section</li>
+                            <li>div、p、ul、ol、h1、h2、...</li>
+                        </ul>
+                    </div>
+
+            </section>
+            <section class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </section>
+            <section class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    </div>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
