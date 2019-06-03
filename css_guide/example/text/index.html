@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text</title>
+    <style>
+        #text1 {
+            text-indent: -4em;
+        }
+
+        .bg-img {
+            width: 800px;
+            height: 300px;
+            color: transparent;
+            font-size: 80px;
+            background-image: url('../../../carousel/img/05.jpg');
+            background-size: contain;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .round-img {
+            background-image: url('../../img/timg.jpeg');
+            background-position: center;
+            background-repeat: round;
+            -webkit-background-repeat: round;
+            width: 240px;
+            height: 240px;
+            margin-right: 10px;
+            margin-bottom: 30px;
+        }
+
+        .stripes {
+            background-image: linear-gradient(90deg, gray 0%, gray 25%,
+                transparent 25%, transparent 50%,
+                gray 50%, gray 75%,
+                transparent 75%, transparent 100%);
+            background-image: -webkit-linear-gradient(90deg, gray 0%, gray 25%,
+                transparent 25%, transparent 50%,
+                gray 50%, gray 75%,
+                transparent 75%, transparent 100%);
+            width: 300px;
+            height: 20px;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="text1">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+            3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+            laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+            coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+            anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+            of them accusamus labore sustainable VHS.
+        </div>
+        <div class="bg-img">HELLO</div>
+        <img src="../../img/timg.jpeg" />
+        <div class="round-img"></div>
+        <div class="stripes"></div>
+    </div>
+</body>
+
+</html>
