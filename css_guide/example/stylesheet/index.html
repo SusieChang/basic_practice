@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>切换样式表</title>
     <link rel="stylesheet" href="day.css" title="Default Day">
-    <link rel="stylesheet slternate" href="night.css" title="Night">
+    <link rel="stylesheet alternate" href="night.css" title="Night">
 </head>
 <body>
     <div class="container">
@@ -15,7 +15,6 @@
         </div>
         <div class="switch">
             <button id="day">day</button>
-            <!-- 消除行内元素空白 -->
             <button id="night">night</button>
         </div>
     </div>
@@ -25,8 +24,8 @@
         var dayLink = document.querySelector('link[title="Default Day"]');
         var nightLink = document.querySelector('link[title="Night"]');
         dayButton.addEventListener('click', function (e) {
-            dayLink.disabled = false;
             nightLink.disabled = true;
+            dayLink.disabled = false;
         });
         nightButton.addEventListener('click', function (e) {
             dayLink.disabled = true;
