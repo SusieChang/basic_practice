@@ -49,18 +49,30 @@ section {
     background-color: var(--forth-color);
 }
 
-h4 {
+h3 {
     font-weight: 800;
     margin: 1em 0 1em 0;
 }
 
-h5 {
+h4{
     font-weight: 600;
-    padding-left: 2em;
     margin: .5em 0 .5em 0;
 }
 
-h5 + p, p + p, p + ul, ul + p {
+h4, h3 + p, h3 + ul {
+    padding-left: 2em;
+}
+
+h4 + p, h4 + ul, h4 + h5, p + p, ul + p {
     padding-left: 4em;
 }
 
+h5 + ul, p + ul {
+    padding-left: 4em;
+}
+
+pre {
+    background-color: lightgray;
+    text-align: left;
+    margin-left: 2rem;
+}

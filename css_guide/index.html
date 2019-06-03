@@ -12,17 +12,8 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <header class="header">
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-transparent p-4">
-                    <ul>
-                        <li><a class="nav-link" href="#heading1">基本概念</a></li>
-                        <li><a class="nav-link" href="#2">1</a></li>
-                    </ul>
-                </div>
-                <small class="bg-transparent p-4">参考资料：<cite>CSS权威指南第四版</cite>、<cite>MDN</cite></small>
-            </div>
             <nav class="navbar navbar-dark bg-transparent sticky-top">
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
@@ -31,6 +22,15 @@
                 </button>
                 <h5 class="text-body h1">CSS权威指南</h5>
             </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-transparent p-4">
+                    <ul>
+                        <li><a class="nav-link" href="#heading1">基本概念</a></li>
+                        <li><a class="nav-link" href="#heading2">选择符</a></li>
+                    </ul>
+                </div>
+                <small class="bg-transparent p-4">参考资料：<cite>CSS权威指南第四版</cite>、<cite>MDN</cite></small>
+            </div>
         </header>
         <main class="accordion" id="accordionExample">
             <section class="card">
@@ -46,11 +46,11 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
                     <div class="card-body">
 
-                        <h4>元素</h4>
-                        <h5>置换元素和非置换元素</h5>
+                        <h3>元素</h3>
+                        <h4>置换元素和非置换元素</h4>
                         <p>置换元素指用来置换元素内容的部分不由文档内容直接表示，而是根据属性决定。比如img、input、textarea等</p>
                         <p>HTML元素大部分是非置换元素，即元素的内容由文档内容直接表示。</p>
-                        <h5>行级元素和块级元素</h5>
+                        <h4>行级元素和块级元素</h4>
                         <p>行内元素的宽度随内容改变，相邻的行内元素排列在同一行，直到一行容纳不下。无法设置宽高。margin和padding设置只在左右方向上有作用。常见的行内元素有：</p>
                         <ul>
                             <li>b, big, i, small, tt</li>
@@ -64,27 +64,70 @@
                             <li>aside、footer、canvas、header、section</li>
                             <li>div、p、ul、ol、h1、h2、...</li>
                         </ul>
+                        <h3>CSS属性display</h3>
+                        <p>取值：display: [&ltdisplay-outside&gt | &ltdisplay-inside&gt | &ltdisplay-listitem&gt | &ltdisplay-internal&gt | &ltdisplay-box&gt | &ltdisplay-legacy&gt]</p>
+                        <ul>
+                            <li><em>&ltdisplay-outside&gt</em> 指定了元素的外部显示类型，实际上就是其在流式布局中的角色。block | inline | run-in</li>
+                            <li><em>&ltdisplay-inside&gt</em> 指定了元素的内部显示类型，它们定义了元素内部内容的格式化上下文的类型。flow | flow-root | table | flex | grid | ruby</li>
+                            <li><em>&ltdisplay-listitem&gt</em> 将这个元素的外部显示类型变为 block 盒，并将内部显示类型变为多个 list-item inline 盒。&ltdisplay-outside&gt ? && [ flow | flow-root ]? && list-item</li>
+                            <li><em>&ltdisplay-internal&gt</em> 像 table 和 ruby 这样的布局模型有着复杂的内部结构，因此它们的孩子和后面的元素可能具有多个角色。这一类关键字就是用来定义这些“内部”显示类型。table-row-group | table-header-group | table-footer-group | table-row | table-cell | table-column-group | table-column | table-caption | ruby-base | ruby-text | ruby-base-container | ruby-text-container</li>
+                            <li><em>&ltdisplay-box&gt</em> 这些值定义元素是否完全生成显示盒。contents | none </li>
+                            <li><em>&ltdisplay-legacy&gt</em> CSS 2 对于 display 属性使用单关键字语法。inline-block | inline-list-item | inline-table | inline-flex | inline-grid</li>
+                        </ul>
+                        <h3>把CSS应用到HTML上</h4>
+                        <h4>link标签</h5>
+                        <ul>
+                            <li>rel：关系，比如stylesheet、alternate stylesheet</li>
+                            <li>type：样式表格式，最好指明，比如 text/css </li>
+                            <li>media：指明媒体的类型</li>
+                            <li>title：默认Default，会根据选择使用样式表</li>
+                        </ul>
+                        <h4>style元素</h4>
+                        <ul>
+                            <li>指明type属性</li>
+                            <li>@import在顶部引入外部样式表</li>
+                        </ul>
+                        <h4>行内样式</h4>
+                        <h3>媒体特性描述符</h3>
+                        <p>width | min-width | max-width | device-width | min-device-width | max-device-width | height | min-height | max-height | device-height | min-device-height | max-device-height | aspect-ratio | min-aspect-ratio | max-aspect-ratio | device-aspect-ratio | color | orientation | resolution | monochrome | scan | grid</p>
+                        <pre>
+    @supports (display: grid) {
+        section#main {
+            display: grid;
+        }
+    }
+                        </pre>
                     </div>
-
             </section>
             <section class="card">
-                <div class="card-header" id="headingTwo">
+                <div class="card-header" id="heading2">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                             data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Collapsible Group Item #2
+                            选择符
                         </button>
                     </h2>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div id="collapseTwo" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
                     <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                        of them accusamus labore sustainable VHS.
+                        <h3>样式规则</h3>
+                        <ul>
+                            <li>元素选择符</li>
+                            <li>群组选择符</li>
+                            <li>通用选择符</li>
+                            <li>类选择符</li>
+                            <li>ID选择符</li>
+                            <li>属性选择符</li>
+                            <li>通用选择符</li>
+                        </ul>
+                        <h3>属性选择符匹配子串</h3>
+                        <ul>
+                            <li>[ foo|='bar' ] 选择的元素有foo属性，且其值以bar和一个英文破折号开头，或者值就是bar本身</li>
+                            <li>[ foo~='bar' ] 选择的元素有foo属性，且其值是包含bar这个词的一组词</li>
+                            <li>[ foo*='bar' ] 选择的元素有foo属性，且其值包含子串bar</li>
+                            <li>[ foo^='bar' ] 选择的元素有foo属性，且其值以bar开头</li>
+                            <li>[ foo$='bar' ] 选择的元素有foo属性，且其值以bar结尾 </li>
+                        </ul>
                     </div>
                 </div>
             </section>
