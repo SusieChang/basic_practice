@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <style>
+        div {
+            width: 600px;
+            height: 400px;
+            background-size: cover;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <div class="image-gallery">
+            <div v-for="image in images" v-lazy="image"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        Vue.directive('lazy', {
+            bind: function (el, binding) {
+                let img = document.createElement('img');
+                el.style.backgroundImage = `url('/lazy_load/entry_image_default.png')`;
+                img.onload = function () {
+                    el.style.backgroundImage = `url(${binding.value})`;
+                };
+                img.onerror = function () {
+                    el.style.backgroundImage = `url('/lazy_load/entry_image_default.png')`;
+                    console.error('failure');
+                };
+                img.src = binding.value;
+            }
+        });
+        var app = new Vue({
+            el: '#app',
+            computed: {
+                top: function() {
+                    let height = document.clientHeight;
+                    console.log(height);
+                }
+            },
+            data: {
+                message: 'Hello Vue!',
+                images: [
+                    'https://images.unsplash.com/photo-1558252100-d4fb123a1af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                    'https://images.unsplash.com/photo-1557998960-05ed9aa698b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                    'https://images.unsplash.com/photo-1559277118-5967ee694257?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                    'https://images.unsplash.com/photo-1559199496-490b6e15a0b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                    'https://images.unsplash.com/photo-1493175562479-13f62f4fd9de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                    'https://images.unsplash.com/photo-1553010037-c6a878840053?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>
